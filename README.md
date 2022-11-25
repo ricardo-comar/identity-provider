@@ -36,9 +36,21 @@ Will be available upon issue #1 is implemented
 
 - [ ] https://github.com/ricardo-comar/identity-provider/issues/1
 
+
+
 ## Workspace configuration
 
-To execute 
+To execute this application, I recomend you to install the following resources:
+
+- VS Code
+- Plugins - Go, Terraform
+- Go (golang)
+- AWS CLI
+- Terraform
+- Localstack
+- tflocal
+- docker
+- docker-compose
 
 ### Execution
 
@@ -49,4 +61,41 @@ First you need to compile the project using the Makefile script:
 Second, start the **localstack** infrastructure to emulate AWS environment:
 
 > cd localstack
-> 
+> docker-compose up
+
+In another terminal configure your AWS CLI, informing same access and secret keys from [docker-compose.yml](localstack/docker-compose.yaml):
+
+> aws configure
+
+Finally, run Terraform commands:
+
+> tflocal init
+> tflocal apply -auto-approve
+
+After creating all resources, a scheduled trigger will start the first Lambda after 2 minutes, quering the data and splitting into messages to be persisted on DynamoDB.
+
+To query for the API id, run this following command:
+
+> aws --endpoint-url=http://localhost:4566 apigateway get-rest-apis
+```
+{
+    "items": [
+        {
+            "id": "uw6qnzhus8",
+            "name": "idp_api",
+            "createdDate": "2022-11-25T14:22:41-03:00",
+            "version": "V1",
+...
+    ]
+}
+```
+
+To call the API, use this URL below with _curl_ changing the ID retrieved: 
+
+> curl http://localhost:4566/restapis/"id"/v1/\_user_request_/employees
+
+More info: https://docs.localstack.cloud/aws/apigatewayv2/
+
+
+
+## References
