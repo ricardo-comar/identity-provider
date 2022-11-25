@@ -5,6 +5,8 @@ Welcome to my instructional application, witch helped me to learn GoLang and Ter
 
 In this repository you will find a simple but helpful example of three types of trigger a Lambda (eventbridge, sqs and http request). All together glued by terraform to proccess and persist data, to be retrieven later using an API interface. 
 
+Special thanks to @erialex to all the support for the last 3 months ! :heart: 
+
 ## Blueprint
 ![](doc/aws-blueprint.png)
 
