@@ -45,6 +45,7 @@ To execute this application, I recomend you to install the following resources:
 - VS Code
 - Plugins - Go, Terraform
 - Go (golang)
+- Python
 - AWS CLI
 - Terraform
 - Localstack
@@ -76,26 +77,26 @@ After creating all resources, a scheduled trigger will start the first Lambda af
 
 To query for the API id, run this following command:
 
-> aws --endpoint-url=http://localhost:4566 apigateway get-rest-apis
-```
-{
-    "items": [
-        {
-            "id": "uw6qnzhus8",
-            "name": "idp_api",
-            "createdDate": "2022-11-25T14:22:41-03:00",
-            "version": "V1",
-...
-    ]
-}
-```
-
-To call the API, use this URL below with _curl_ changing the ID retrieved: 
-
-> curl http://localhost:4566/restapis/"id"/v1/\_user_request_/employees
-
-More info: https://docs.localstack.cloud/aws/apigatewayv2/
-
+> make gateway
 
 
 ## References
+* https://dev.to/makalaaneesh/golang-for-object-oriented-people-l7h
+* https://golangbyexample.com/
+* https://dynobase.dev/dynamodb-golang-query-examples/
+* https://blog.chrismitchellonline.com/posts/aws-sqs-message-with-attributes/
+* https://aws.github.io/aws-sdk-go-v2/docs/making-requests/
+* https://docs.localstack.cloud/get-started/#localstack-cli
+* https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/gov2
+* https://reshefsharvit.medium.com/go-faster-with-golang-and-localstack-ace2138dc0e7
+* https://christiangiacomi.com/posts/terraform-sns-sqs-lambda/
+* https://medium.com/swlh/serverless-super-simple-api-development-with-go-terraform-and-aws-lambda-cc2dd6c531cb
+* https://forum.serverless.com/t/eventbridge-trigger-on-localstack-defaults-to-default-event-bus-even-though-a-new-one-is-passed/14709
+* https://medium.com/nagoya-foundation/running-and-debugging-go-lambda-functions-locally-156893e4ed0d
+* https://reshefsharvit.medium.com/go-faster-with-golang-and-localstack-ace2138dc0e7
+* https://levelup.gitconnected.com/setup-your-go-lambda-and-deploy-with-terraform-9105bda2bd18
+* https://levelup.gitconnected.com/run-go-aws-lambda-locally-with-localstack-and-serverless-framework-5c80894f389c
+* https://medium.com/@jain.vaibhav09/run-aws-resources-on-macos-locally-2aa2e1940eb4
+* http://www.inanzzz.com/index.php/post/1e0r/using-aws-eventbridge-to-manually-send-events-to-lambda-functions-in-golang
+* https://github.com/terraform-aws-modules/terraform-aws-eventbridge/tree/v1.15.1/examples
+* https://openupthecloud.com/terraform-lambda-scheduled-event/

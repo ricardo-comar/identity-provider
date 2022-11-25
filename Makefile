@@ -35,3 +35,6 @@ event:
 
 msg:
 	aws --endpoint http://localhost:4566 sqs send-message --queue-url http://localhost:4566/000000000000/identity-provider-sqs-employees --message-body "IOT-1 Temp: 51C"
+
+gateway:
+	curl http://localhost:4566/restapis/$(shell aws --endpoint-url=http://localhost:4566 apigateway get-rest-apis | jq -r '.items[0].id')/v1/\_user_request_/employees | jq
