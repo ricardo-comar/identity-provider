@@ -33,7 +33,8 @@ Component responsible to retain the data, using a TTL (time to live) column to a
 ### Bucket S3, Glaciar and Athena
 
 :construction:
-Will be available upon issue is implemented: #1
+Will be available upon issue is implemented
+- [ ] #1
 
 ## Workspace configuration
 
