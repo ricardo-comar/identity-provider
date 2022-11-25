@@ -34,7 +34,7 @@ Component responsible to retain the data, using a TTL (time to live) column to a
 
 :construction:
 Will be available upon issue is implemented
-- [ ] #1
+- [ ] https://github.com/ricardo-comar/identity-provider/issues/1
 
 ## Workspace configuration
 
