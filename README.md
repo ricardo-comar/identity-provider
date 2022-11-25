@@ -30,11 +30,9 @@ Component responsible to expose the Lambda to outside of the VPC
 
 Component responsible to retain the data, using a TTL (time to live) column to automaticaly remove the obsolete data.
 
-### Bucket S3, Glaciar and Athena
+### Bucket S3, Glaciar and Athena :construction:
 
-:construction:
-
-Will be available upon issue is implemented
+Will be available upon issue #1 is implemented
 
 - [ ] https://github.com/ricardo-comar/identity-provider/issues/1
 
