@@ -33,7 +33,9 @@ Component responsible to retain the data, using a TTL (time to live) column to a
 ### Bucket S3, Glaciar and Athena
 
 :construction:
+
 Will be available upon issue is implemented
+
 - [ ] https://github.com/ricardo-comar/identity-provider/issues/1
 
 ## Workspace configuration
