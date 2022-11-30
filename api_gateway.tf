@@ -76,7 +76,7 @@ resource "aws_api_gateway_rest_api_policy" "rest_api_policy" {
 }
 EOF
 
-#3.135.189.93 - Squid Sectools Ohio - Hom
+  #3.135.189.93 - Squid Sectools Ohio - Hom
 
 }
 
