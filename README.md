@@ -64,6 +64,7 @@ First you need to compile the project using the Makefile script:
 Second, start the **localstack** infrastructure to emulate AWS environment:
 
 > cd localstack
+
 > docker-compose up
 
 In another terminal configure your AWS CLI, informing same access and secret keys from [docker-compose.yml](localstack/docker-compose.yaml):
