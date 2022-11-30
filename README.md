@@ -74,6 +74,7 @@ In another terminal configure your AWS CLI, informing same access and secret key
 Finally, run Terraform commands:
 
 > tflocal init
+
 > tflocal apply -auto-approve
 
 After creating all resources, a scheduled trigger will start the first Lambda after 2 minutes, quering the data and splitting into messages to be persisted on DynamoDB.
