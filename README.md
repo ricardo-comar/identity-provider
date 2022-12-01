@@ -8,7 +8,8 @@ In this repository you will find a simple but helpful example of three types of 
 Special thanks to @erialex to all the support for the last 3 months ! :heart: 
 
 ## Blueprint
-[![AWS Blueprint](doc/aws-blueprint.png)](https://app.cloudcraft.co/view/574cf304-cddb-42e1-a066-4ff9cef9a26d?key=a88736eb-4bbe-43fc-8423-7ed885bb40bc)
+![](doc/aws-blueprint.png)
+[Link to Cloudcraft Blueprint](https://app.cloudcraft.co/view/574cf304-cddb-42e1-a066-4ff9cef9a26d?key=a88736eb-4bbe-43fc-8423-7ed885bb40bc)
 
 ## Components
 
