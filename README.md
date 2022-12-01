@@ -68,6 +68,8 @@ Second, start the **localstack** infrastructure to emulate AWS environment:
 
 > docker-compose up
 
+You can check it's availability from health check: http://localhost:4566/health
+
 In another terminal configure your AWS CLI, informing same access and secret keys from [docker-compose.yml](localstack/docker-compose.yaml):
 
 > aws configure
