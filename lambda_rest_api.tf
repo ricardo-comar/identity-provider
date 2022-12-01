@@ -1,6 +1,6 @@
 data "archive_file" "lambda_rest_api_zip" {
   type        = "zip"
-  source_file = "bin/source_rest_api"
+  source_file = "bin/lambda_rest_api"
   output_path = "bin/rest_api.zip"
 }
 
@@ -10,7 +10,7 @@ resource "aws_lambda_function" "rest_api" {
   function_name    = "identity-provider-rest-api"
   description      = "REST API to expose database data"
   role             = aws_iam_role.lambda_role_rest_api.arn
-  handler          = "source_rest_api"
+  handler          = "lambda_rest_api"
   source_code_hash = filebase64sha256(data.archive_file.lambda_rest_api_zip.output_path)
   runtime          = "go1.x"
   memory_size      = 1024

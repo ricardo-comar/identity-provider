@@ -1,6 +1,6 @@
 data "archive_file" "lambda_registration_zip" {
   type        = "zip"
-  source_file = "bin/source_registration"
+  source_file = "bin/lambda_registration"
   output_path = "bin/registration.zip"
 }
 
@@ -10,7 +10,7 @@ resource "aws_lambda_function" "registration" {
   function_name    = "identity-provider-registration"
   description      = "Employee Registration Lambda"
   role             = aws_iam_role.lambda_role_registration.arn
-  handler          = "source_registration"
+  handler          = "lambda_registration"
   source_code_hash = filebase64sha256(data.archive_file.lambda_registration_zip.output_path)
   runtime          = "go1.x"
   memory_size      = 1024

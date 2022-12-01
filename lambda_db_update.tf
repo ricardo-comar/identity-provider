@@ -1,6 +1,6 @@
 data "archive_file" "lambda_db_update_zip" {
   type        = "zip"
-  source_file = "bin/source_db_update"
+  source_file = "bin/lambda_db_update"
   output_path = "bin/db_update.zip"
 }
 
@@ -10,7 +10,7 @@ resource "aws_lambda_function" "db_update" {
   function_name    = "identity-provider-db-update"
   description      = "DB Update Lambda"
   role             = aws_iam_role.lambda_role_db_update.arn
-  handler          = "source_db_update"
+  handler          = "lambda_db_update"
   source_code_hash = filebase64sha256(data.archive_file.lambda_db_update_zip.output_path)
   runtime          = "go1.x"
   memory_size      = 1024
