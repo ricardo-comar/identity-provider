@@ -56,27 +56,10 @@ resource "aws_api_gateway_rest_api_policy" "rest_api_policy" {
             "Resource": [
                 "${aws_api_gateway_rest_api.idp_api.execution_arn}/*"
             ]
-        },
-        {
-            "Effect": "Deny",
-            "Principal": "*",
-            "Action": "execute-api:Invoke",
-            "Resource": [
-                "${aws_api_gateway_rest_api.idp_api.execution_arn}/*"
-            ],
-            "Condition": {
-                "NotIpAddress": {
-                    "aws:SourceIp": [
-                      "3.135.189.93/32"
-                    ]
-                }
-            }
         }
     ]
 }
 EOF
-
-  #3.135.189.93 - Squid Sectools Ohio - Hom
 
 }
 
