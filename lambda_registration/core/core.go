@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/ricardo-comar/identity-provider/config"
+	"github.com/ricardo-comar/identity-provider/registration/config"
 )
 
 type Core struct {

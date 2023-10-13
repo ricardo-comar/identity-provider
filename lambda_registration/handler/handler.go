@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/ricardo-comar/identity-provider/model"
-	"github.com/ricardo-comar/identity-provider/service"
+	"github.com/ricardo-comar/identity-provider/lib_common/model"
+	"github.com/ricardo-comar/identity-provider/registration/service"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"

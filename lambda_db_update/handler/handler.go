@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/google/uuid"
-	"github.com/ricardo-comar/identity-provider/gateway"
-	"github.com/ricardo-comar/identity-provider/model"
+	"github.com/ricardo-comar/identity-provider/db_update/gateway"
+	"github.com/ricardo-comar/identity-provider/lib_common/model"
 
 	"encoding/json"
 )

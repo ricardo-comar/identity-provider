@@ -4,9 +4,9 @@ import (
 	"encoding/xml"
 	"log"
 
-	"github.com/ricardo-comar/identity-provider/core"
-	"github.com/ricardo-comar/identity-provider/gateway"
-	"github.com/ricardo-comar/identity-provider/model"
+	"github.com/ricardo-comar/identity-provider/lib_common/model"
+	"github.com/ricardo-comar/identity-provider/registration/core"
+	"github.com/ricardo-comar/identity-provider/registration/gateway"
 
 	"github.com/go-resty/resty/v2"
 )

@@ -9,8 +9,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/sqs"
 	"github.com/aws/aws-sdk-go-v2/service/sqs/types"
 	"github.com/google/uuid"
-	"github.com/ricardo-comar/identity-provider/core"
-	"github.com/ricardo-comar/identity-provider/model"
+	"github.com/ricardo-comar/identity-provider/lib_common/model"
+	"github.com/ricardo-comar/identity-provider/registration/core"
 )
 
 func SendMessage(core *core.Core, ctx *model.ExecutionContext, message interface{}) (*string, error) {
