@@ -1,6 +1,6 @@
 module github.com/ricardo-comar/identity-provider/rest_api
 
-go 1.23
+go 1.21.3
 
 require (
 	github.com/aws/aws-sdk-go-v2/credentials v1.13.0 // indirect
