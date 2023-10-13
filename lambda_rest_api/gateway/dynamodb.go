@@ -6,7 +6,7 @@ import (
 	"math"
 	"os"
 
-	"github.com/ricardo-comar/identity-provider/entity"
+	"github.com/ricardo-comar/identity-provider/lib_common/entity"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue"

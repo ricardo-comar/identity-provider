@@ -36,17 +36,17 @@ func handleMessages(ctx context.Context, sqsEvent events.SQSEvent) error {
 	for _, message := range sqsEvent.Records {
 		eventID := message.MessageAttributes["EventID"].StringValue
 
-		execCtx := model.NewExecutionContext(cfg, *eventID, processID, message.MessageId, message.Body)
+		execCtx := model.NewExecutionContext(ctx, cfg, *eventID, processID, message.MessageId, message.Body)
 
 		log.Printf("Iniciando - evento %s , processo %s e mensagem %s", execCtx.EventID, execCtx.ProcessID, execCtx.MessageID)
 		inicioMsg := time.Now()
 
 		handleMessage(execCtx, message.Body)
 
-		log.Printf("Finalizando - mensagem %s em %dms", execCtx.MessageID, time.Now().Sub(inicioMsg))
+		log.Printf("Finalizando - mensagem %s em %dms", execCtx.MessageID, time.Since(inicioMsg).Milliseconds())
 	}
 
-	log.Printf("Finalizando - processo %s em %dms", processID, time.Now().Sub(inicioProc))
+	log.Printf("Finalizando - processo %s em %dms", processID, time.Since(inicioProc).Milliseconds())
 	return nil
 }
 

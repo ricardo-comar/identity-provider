@@ -7,22 +7,22 @@ import (
 )
 
 type ExecutionContext struct {
-	Ctx         context.Context
-	Cfg         aws.Config
-	EventID     string
-	ProcessID   string
-	EventSource string
-	Body        string
+	Ctx       context.Context
+	Cfg       aws.Config
+	EventID   string
+	ProcessID string
+	MessageID string
+	Body      string
 }
 
-func NewExecutionContext(Ctx context.Context, Cfg aws.Config, EventID string, ProcessID string, EventSource string, Body string) *ExecutionContext {
+func NewExecutionContext(Ctx context.Context, Cfg aws.Config, EventID string, ProcessID string, MessageID string, Body string) *ExecutionContext {
 
 	execCtx := &ExecutionContext{}
 	execCtx.Ctx = Ctx
 	execCtx.Cfg = Cfg
 	execCtx.EventID = EventID
 	execCtx.ProcessID = ProcessID
-	execCtx.EventSource = EventSource
+	execCtx.MessageID = MessageID
 	execCtx.Body = Body
 
 	return execCtx

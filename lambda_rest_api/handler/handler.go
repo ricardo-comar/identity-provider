@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go-v2/config"
-	"github.com/ricardo-comar/identity-provider/entity"
-	"github.com/ricardo-comar/identity-provider/gateway"
+	"github.com/ricardo-comar/identity-provider/lib_common/entity"
+	"github.com/ricardo-comar/identity-provider/rest_api/gateway"
 )
 
 func main() {
