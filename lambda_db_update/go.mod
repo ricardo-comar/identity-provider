@@ -1,6 +1,6 @@
 module github.com/ricardo-comar/identity-provider/db_update
 
-go 1.21.3
+go 1.23
 
 require (
 	github.com/aws/aws-sdk-go-v2/credentials v1.12.23 // indirect
