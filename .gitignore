@@ -1,0 +1,6 @@
+.terraform
+*.tfstate
+*.backup
+.*
+bin/
+localstack/volume
